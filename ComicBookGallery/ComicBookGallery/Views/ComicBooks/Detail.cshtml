@@ -1,5 +1,12 @@
 ﻿@{
     Layout = null;
+    var seriesTitle = "The Amazing Spider-Man";
+    var issueNumber = 700;
+    var description = "<p> Final issue!<p>";
+    var artist = new string[]
+    {
+        "Script: Dan Slott","Pencils: Humberto Ramos"
+    };
 }
 
 <!DOCTYPE html>
@@ -11,7 +18,12 @@
 </head>
 <body>
     <div>
-        <h1>Hello from our View</h1>
+        <h1>@seriesTitle</h1>
+        <h2>Issue #@issueNumber</h2>
+        <div>@Html.Raw(description)</div>
+
+        <h5>Artist:</h5>
+        <div>@Html.Raw(artist)</div>
     </div>
 </body>
 </html>
